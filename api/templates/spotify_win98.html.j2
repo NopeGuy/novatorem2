@@ -1,0 +1,190 @@
+<svg width="480" height="133" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <foreignObject width="480" height="133">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="container">
+            <style>
+                .main {
+                    display: flex;
+                    height: 113px;
+                }
+
+                .container {
+                    background-color: #c0c0c0;
+                    border: 2px outset #c0c0c0;
+                    padding: 8px;
+                    font-family: 'MS Sans Serif', sans-serif;
+                    box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+                }
+
+                .art {
+                    width: 27%;
+                    float: left;
+                    margin-right: 8px;
+                }
+
+                .content {
+                    width: 71%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .cover {
+                    width: 100px;
+                    height: 100px;
+                    border: 1px inset #c0c0c0;
+                    box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px #808080;
+                }
+
+                .song {
+                    color: #000080;
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin: 4px 0;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
+                .artist {
+                    color: #000000;
+                    font-size: 14px;
+                    margin: 2px 0;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+                .status-bar {
+                    background-color: #c0c0c0;
+                    border: 1px inset #c0c0c0;
+                    padding: 2px 4px;
+                    font-size: 11px;
+                    color: #000000;
+                    margin-top: 4px;
+                    box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px #808080;
+                }
+
+                .volume-control {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 4px;
+                }
+
+                .volume-label {
+                    font-size: 11px;
+                    color: #000000;
+                    margin-right: 4px;
+                }
+
+                #bars {
+                    width: 200px;
+                    height: 20px;
+                    background-color: #008080;
+                    border: 1px inset #c0c0c0;
+                    position: relative;
+                    overflow: hidden;
+                    box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px #808080;
+                }
+
+                .bar {
+                    width: 4px;
+                    height: 18px;
+                    position: absolute;
+                    bottom: 1px;
+                    background-color: #00ffff;
+                    border-right: 1px solid #008080;
+                    animation: win98pulse 1.5s ease-in-out infinite alternate;
+                }
+
+                .window-title {
+                    background: linear-gradient(90deg, #000080 0%, #000040 100%);
+                    color: white;
+                    font-size: 11px;
+                    font-weight: bold;
+                    padding: 2px 4px;
+                    margin: -8px -8px 4px -8px;
+                    border-bottom: 1px solid #808080;
+                }
+
+                .window-controls {
+                    float: right;
+                    color: white;
+                    font-size: 10px;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                a:hover .song {
+                    background-color: #000080;
+                    color: white;
+                    text-decoration: none;
+                }
+
+                .button {
+                    background-color: #c0c0c0;
+                    border: 1px outset #c0c0c0;
+                    padding: 2px 6px;
+                    font-size: 11px;
+                    color: #000000;
+                    cursor: pointer;
+                    margin-right: 2px;
+                    box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf;
+                }
+
+                .button:active {
+                    border: 1px inset #c0c0c0;
+                    box-shadow: inset 1px 1px #808080, inset -1px -1px #dfdfdf;
+                }
+
+                @keyframes win98pulse {
+                    0% {
+                        height: 4px;
+                        background-color: #00ffff;
+                    }
+                    100% {
+                        height: 18px;
+                        background-color: #ffffff;
+                    }
+                }
+
+                /* Generate bars CSS - replace static bars */
+                {{barCSS|safe}}
+            </style>
+
+            <div class="window-title">
+                ♪ Spotify Now Playing
+                <div class="window-controls">_ □ ×</div>
+            </div>
+
+            <div class="main">
+                <a class="art" href="{{songURI}}" target="_blank">
+                    <center>
+                        <img src="data:image/png;base64, {{image}}" class="cover" />
+                    </center>
+                </a>
+
+                <div class="content">
+                    <div>
+                        <a href="{{songURI}}" target="_blank">
+                            <div class="song">{{songName}}</div>
+                        </a>
+                        <a href="{{artistURI}}" target="_blank">
+                            <div class="artist">{{artistName}}</div>
+                        </a>
+                    </div>
+                    
+                    <div class="volume-control">
+                        <span class="volume-label">Visualizer:</span>
+                        <div id="bars">{{contentBar|safe}}</div>
+                    </div>
+                    
+                    <div class="status-bar">{{status}}</div>
+                </div>
+            </div>
+        </div>
+    </foreignObject>
+</svg>

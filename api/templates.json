@@ -1,7 +1,8 @@
 {
-    "current-theme": "dark",
+    "current-theme": "win98",
     "templates": {
         "light": "spotify.html.j2",
-        "dark": "spotify-dark.html.j2"
+        "dark": "spotify-dark.html.j2",
+        "win98": "spotify_win98.html.j2"
     }
 }
