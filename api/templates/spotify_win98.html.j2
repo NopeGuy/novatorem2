@@ -1,16 +1,16 @@
-<svg width="480" height="133" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <foreignObject width="480" height="133">
+<svg width="440" height="120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <foreignObject width="440" height="120">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <style>
                 .main {
                     display: flex;
-                    height: 113px;
+                    height: 100px;
                 }
 
                 .container {
                     background-color: #c0c0c0;
                     border: 2px outset #c0c0c0;
-                    padding: 8px;
+                    padding: 6px;
                     font-family: 'MS Sans Serif', sans-serif;
                     box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
                 }
@@ -18,7 +18,7 @@
                 .art {
                     width: 27%;
                     float: left;
-                    margin-right: 8px;
+                    margin-right: 6px;
                 }
 
                 .content {
@@ -29,17 +29,17 @@
                 }
 
                 .cover {
-                    width: 100px;
-                    height: 100px;
+                    width: 85px;
+                    height: 85px;
                     border: 1px inset #c0c0c0;
                     box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px #808080;
                 }
 
                 .song {
                     color: #000080;
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: bold;
-                    margin: 4px 0;
+                    margin: 3px 0;
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
@@ -49,7 +49,7 @@
 
                 .artist {
                     color: #000000;
-                    font-size: 14px;
+                    font-size: 12px;
                     margin: 2px 0;
                     overflow: hidden;
                     white-space: nowrap;
@@ -60,27 +60,27 @@
                     background-color: #c0c0c0;
                     border: 1px inset #c0c0c0;
                     padding: 2px 4px;
-                    font-size: 11px;
+                    font-size: 10px;
                     color: #000000;
-                    margin-top: 4px;
+                    margin-top: 3px;
                     box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px #808080;
                 }
 
                 .volume-control {
                     display: flex;
                     align-items: center;
-                    margin-top: 4px;
+                    margin-top: 3px;
                 }
 
                 .volume-label {
-                    font-size: 11px;
+                    font-size: 10px;
                     color: #000000;
                     margin-right: 4px;
                 }
 
                 #bars {
-                    width: 200px;
-                    height: 20px;
+                    width: 180px;
+                    height: 18px;
                     background-color: #008080;
                     border: 1px inset #c0c0c0;
                     position: relative;
@@ -89,29 +89,27 @@
                 }
 
                 .bar {
-                    width: 4px;
-                    height: 18px;
+                    width: 3px;
                     position: absolute;
                     bottom: 1px;
                     background-color: #00ffff;
                     border-right: 1px solid #008080;
-                    animation: win98pulse 1.5s ease-in-out infinite alternate;
                 }
 
                 .window-title {
                     background: linear-gradient(90deg, #000080 0%, #000040 100%);
                     color: white;
-                    font-size: 11px;
+                    font-size: 10px;
                     font-weight: bold;
                     padding: 2px 4px;
-                    margin: -8px -8px 4px -8px;
+                    margin: -6px -6px 3px -6px;
                     border-bottom: 1px solid #808080;
                 }
 
                 .window-controls {
                     float: right;
                     color: white;
-                    font-size: 10px;
+                    font-size: 9px;
                 }
 
                 a {
@@ -127,8 +125,8 @@
                 .button {
                     background-color: #c0c0c0;
                     border: 1px outset #c0c0c0;
-                    padding: 2px 6px;
-                    font-size: 11px;
+                    padding: 2px 5px;
+                    font-size: 10px;
                     color: #000000;
                     cursor: pointer;
                     margin-right: 2px;
@@ -140,19 +138,53 @@
                     box-shadow: inset 1px 1px #808080, inset -1px -1px #dfdfdf;
                 }
 
-                @keyframes win98pulse {
+                /* Individual bar animations with staggered delays */
+                .bar:nth-child(1) { left: 2px; animation: pulse 1.2s ease-in-out infinite alternate; animation-delay: 0s; }
+                .bar:nth-child(2) { left: 7px; animation: pulse 1.3s ease-in-out infinite alternate; animation-delay: 0.1s; }
+                .bar:nth-child(3) { left: 12px; animation: pulse 1.1s ease-in-out infinite alternate; animation-delay: 0.2s; }
+                .bar:nth-child(4) { left: 17px; animation: pulse 1.4s ease-in-out infinite alternate; animation-delay: 0.3s; }
+                .bar:nth-child(5) { left: 22px; animation: pulse 1.2s ease-in-out infinite alternate; animation-delay: 0.4s; }
+                .bar:nth-child(6) { left: 27px; animation: pulse 1.5s ease-in-out infinite alternate; animation-delay: 0.5s; }
+                .bar:nth-child(7) { left: 32px; animation: pulse 1.1s ease-in-out infinite alternate; animation-delay: 0.6s; }
+                .bar:nth-child(8) { left: 37px; animation: pulse 1.3s ease-in-out infinite alternate; animation-delay: 0.7s; }
+                .bar:nth-child(9) { left: 42px; animation: pulse 1.2s ease-in-out infinite alternate; animation-delay: 0.8s; }
+                .bar:nth-child(10) { left: 47px; animation: pulse 1.4s ease-in-out infinite alternate; animation-delay: 0.9s; }
+                .bar:nth-child(11) { left: 52px; animation: pulse 1.1s ease-in-out infinite alternate; animation-delay: 1.0s; }
+                .bar:nth-child(12) { left: 57px; animation: pulse 1.3s ease-in-out infinite alternate; animation-delay: 1.1s; }
+                .bar:nth-child(13) { left: 62px; animation: pulse 1.2s ease-in-out infinite alternate; animation-delay: 1.2s; }
+                .bar:nth-child(14) { left: 67px; animation: pulse 1.5s ease-in-out infinite alternate; animation-delay: 1.3s; }
+                .bar:nth-child(15) { left: 72px; animation: pulse 1.1s ease-in-out infinite alternate; animation-delay: 1.4s; }
+                .bar:nth-child(16) { left: 77px; animation: pulse 1.3s ease-in-out infinite alternate; animation-delay: 0.1s; }
+                .bar:nth-child(17) { left: 82px; animation: pulse 1.2s ease-in-out infinite alternate; animation-delay: 0.2s; }
+                .bar:nth-child(18) { left: 87px; animation: pulse 1.4s ease-in-out infinite alternate; animation-delay: 0.3s; }
+                .bar:nth-child(19) { left: 92px; animation: pulse 1.1s ease-in-out infinite alternate; animation-delay: 0.4s; }
+                .bar:nth-child(20) { left: 97px; animation: pulse 1.3s ease-in-out infinite alternate; animation-delay: 0.5s; }
+                .bar:nth-child(21) { left: 102px; animation: pulse 1.2s ease-in-out infinite alternate; animation-delay: 0.6s; }
+                .bar:nth-child(22) { left: 107px; animation: pulse 1.5s ease-in-out infinite alternate; animation-delay: 0.7s; }
+                .bar:nth-child(23) { left: 112px; animation: pulse 1.1s ease-in-out infinite alternate; animation-delay: 0.8s; }
+                .bar:nth-child(24) { left: 117px; animation: pulse 1.3s ease-in-out infinite alternate; animation-delay: 0.9s; }
+                .bar:nth-child(25) { left: 122px; animation: pulse 1.2s ease-in-out infinite alternate; animation-delay: 1.0s; }
+                .bar:nth-child(26) { left: 127px; animation: pulse 1.4s ease-in-out infinite alternate; animation-delay: 1.1s; }
+                .bar:nth-child(27) { left: 132px; animation: pulse 1.1s ease-in-out infinite alternate; animation-delay: 1.2s; }
+                .bar:nth-child(28) { left: 137px; animation: pulse 1.3s ease-in-out infinite alternate; animation-delay: 1.3s; }
+                .bar:nth-child(29) { left: 142px; animation: pulse 1.2s ease-in-out infinite alternate; animation-delay: 1.4s; }
+                .bar:nth-child(30) { left: 147px; animation: pulse 1.5s ease-in-out infinite alternate; animation-delay: 0.1s; }
+                .bar:nth-child(31) { left: 152px; animation: pulse 1.1s ease-in-out infinite alternate; animation-delay: 0.2s; }
+                .bar:nth-child(32) { left: 157px; animation: pulse 1.3s ease-in-out infinite alternate; animation-delay: 0.3s; }
+                .bar:nth-child(33) { left: 162px; animation: pulse 1.2s ease-in-out infinite alternate; animation-delay: 0.4s; }
+                .bar:nth-child(34) { left: 167px; animation: pulse 1.4s ease-in-out infinite alternate; animation-delay: 0.5s; }
+                .bar:nth-child(35) { left: 172px; animation: pulse 1.1s ease-in-out infinite alternate; animation-delay: 0.6s; }
+
+                @keyframes pulse {
                     0% {
-                        height: 4px;
+                        height: 3px;
                         background-color: #00ffff;
                     }
                     100% {
-                        height: 18px;
+                        height: 16px;
                         background-color: #ffffff;
                     }
                 }
-
-                /* Generate bars CSS - replace static bars */
-                {{barCSS|safe}}
             </style>
 
             <div class="window-title">
@@ -178,7 +210,15 @@
                     </div>
                     
                     <div class="volume-control">
-                        <div id="bars">{{contentBar|safe}}</div>
+                        <div id="bars">
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                        </div>
                     </div>
                     
                     <div class="status-bar">{{status}}</div>
